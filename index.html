@@ -1,0 +1,485 @@
+<style>
+    body {
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .display1 {
+    
+      
+       
+    position: absolute;
+    }
+
+    .display2 {
+        margin-left: 161px;
+    position: absolute;
+     
+    }
+
+    .display3 {
+        margin-left: 161px;
+    position: absolute;
+     
+    }
+
+    .segment {
+        height: 125px;
+        width: 15px;
+        background-color: #990000;
+        border-radius: 9999px;
+        box-shadow: 0px 0px 25px #990000;
+    }
+
+    .A {
+        position: absolute;
+        top: -45px;
+        left: 90px;
+        transform: rotate(90deg);
+    }
+
+    .B {
+        position: absolute;
+        top: 20px;
+        left: 160px;
+    }
+
+    .C {
+        position: absolute;
+        top: 150px;
+        left: 160px;
+    }
+
+    .D {
+        position: absolute;
+        top: 215px;
+        left: 90px;
+        transform: rotate(90deg);
+    }
+
+    .E {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+    }
+
+    .F {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .G {
+        position: absolute;
+        top: 85px;
+        left: 90px;
+        transform: rotate(90deg);
+    }
+</style>
+
+
+<div>
+    <div class="display1">
+        <div class="segment A"></div>
+        <div class="segment B"></div>
+        <div class="segment C"></div>
+        <div class="segment D"></div>
+        <div class="segment E"></div>
+        <div class="segment F"></div>
+        <div class="segment G"></div>
+    </div>
+    <div class="display2">
+        <div class="segment A"></div>
+        <div class="segment B"></div>
+        <div class="segment C"></div>
+        <div class="segment D"></div>
+        <div class="segment E"></div>
+        <div class="segment F"></div>
+        <div class="segment G"></div>
+    </div>
+    <div class="display3">
+        <div class="segment A"></div>
+        <div class="segment B"></div>
+        <div class="segment C"></div>
+        <div class="segment D"></div>
+        <div class="segment E"></div>
+        <div class="segment F"></div>
+        <div class="segment G"></div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+    var display1 = {
+        zero: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .E, .F').show();
+        },
+        one: function () {
+            this.lightsOut();
+            $('.B, .C').show();
+        },
+        two: function () {
+            this.lightsOut();
+            $('.A, .B, .D, .E, .G').show();
+        },
+        three: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .G').show();
+        },
+        four: function () {
+            this.lightsOut();
+            $('.B, .C, .F, .G').show();
+        },
+        five: function () {
+            this.lightsOut();
+            $('.A, .C, .D, .F, .G').show();
+        },
+        six: function () {
+            this.lightsOut();
+            $('.A, .C, .D, .E, .F, .G').show();
+        },
+        seven: function () {
+            this.lightsOut();
+            $('.A, .B, .C').show();
+        },
+        eight: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .E, .F, .G').show();
+        },
+        nine: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .F, .G').show();
+        },
+        lightsOut: function () {
+            $('.A, .B, .C, .D, .E, .G, .D, .F').hide();
+        }
+    };
+
+
+    var display2 = {
+        zero: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .E, .F').show();
+        },
+        one: function () {
+            this.lightsOut();
+            $('.B, .C').show();
+        },
+        two: function () {
+            this.lightsOut();
+            $('.A, .B, .D, .E, .G').show();
+        },
+        three: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .G').show();
+        },
+        four: function () {
+            this.lightsOut();
+            $('.B, .C, .F, .G').show();
+        },
+        five: function () {
+            this.lightsOut();
+            $('.A, .C, .D, .F, .G').show();
+        },
+        six: function () {
+            this.lightsOut();
+            $('.A, .C, .D, .E, .F, .G').show();
+        },
+        seven: function () {
+            this.lightsOut();
+            $('.A, .B, .C').show();
+        },
+        eight: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .E, .F, .G').show();
+        },
+        nine: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .F, .G').show();
+        },
+        lightsOut: function () {
+            $('.A, .B, .C, .D, .E, .G, .D, .F').hide();
+        }
+    };
+
+    var display3 = {
+        zero: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .E, .F').show();
+        },
+        one: function () {
+            this.lightsOut();
+            $('.B, .C').show();
+        },
+        two: function () {
+            this.lightsOut();
+            $('.A, .B, .D, .E, .G').show();
+        },
+        three: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .G').show();
+        },
+        four: function () {
+            this.lightsOut();
+            $('.B, .C, .F, .G').show();
+        },
+        five: function () {
+            this.lightsOut();
+            $('.A, .C, .D, .F, .G').show();
+        },
+        six: function () {
+            this.lightsOut();
+            $('.A, .C, .D, .E, .F, .G').show();
+        },
+        seven: function () {
+            this.lightsOut();
+            $('.A, .B, .C').show();
+        },
+        eight: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .E, .F, .G').show();
+        },
+        nine: function () {
+            this.lightsOut();
+            $('.A, .B, .C, .D, .F, .G').show();
+        },
+        lightsOut: function () {
+            $('.A, .B, .C, .D, .E, .G, .D, .F').hide();
+        }
+    };
+
+
+
+    function buscaNumero() {
+
+        const settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://us-central1-ss-devops.cloudfunctions.net/rand?min=1&max=300",
+            "method": "GET",
+            "headers": {}
+        };
+
+        $.ajax(settings).done(function (response) {
+
+
+            var casa1 = response.value.toString()[0];
+            var casa2 = response.value.toString()[1];
+            var casa3 = response.value.toString()[2];
+
+            console.log(casa1);
+            console.log(casa2);
+            console.log(casa3);
+
+
+            if (casa1) {
+
+                if (casa1 == 0) {
+
+                    display1.zero();
+
+                }
+
+                if (casa1 == 1) {
+
+                    display1.one()
+
+                }
+
+                if (casa1 == 2) {
+
+                    display1.two();
+
+                }
+
+                if (casa1 == 3) {
+
+                    display1.three();
+
+                }
+
+                if (casa1 == 4) {
+
+                    display1.four();
+
+                }
+
+                if (casa1 == 5) {
+
+                    display1.five();
+
+                }
+
+                if (casa1 == 6) {
+
+                    display1.six();
+
+                }
+
+                if (casa1 == 7) {
+
+                    display1.seven();
+
+                }
+
+                if (casa1 == 8) {
+
+                    display1.eight();
+
+                }
+
+                if (casa1 == 9) {
+
+                    display1.nine();
+
+                }
+
+
+            }
+
+
+            if (casa2) {
+
+                if (casa2 == 0) {
+
+                    display2.zero();
+
+                }
+
+                if (casa2 == 1) {
+
+                    display2.one()
+
+                }
+
+                if (casa2 == 2) {
+
+                    display2.two();
+
+                }
+
+                if (casa2 == 3) {
+
+                    display2.three();
+
+                }
+
+                if (casa2 == 4) {
+
+                    display2.four();
+
+                }
+
+                if (casa2 == 5) {
+
+                    display2.five();
+
+                }
+
+                if (casa2 == 6) {
+
+                    display2.six();
+
+                }
+
+                if (casa2 == 7) {
+
+                    display2.seven();
+
+                }
+
+                if (casa2 == 8) {
+
+                    display2.eight();
+
+                }
+
+                if (casa2 == 9) {
+
+                    display2.nine();
+
+                }
+
+
+            }
+
+
+            if (casa3) {
+
+                if (casa3 == 0) {
+
+                    display3.zero();
+
+                }
+
+                if (casa3 == 1) {
+
+                    display3.one()
+
+                }
+
+                if (casa3 == 2) {
+
+                    display3.two();
+
+                }
+
+                if (casa3 == 3) {
+
+                    display3.three();
+
+                }
+
+                if (casa3 == 4) {
+
+                    display3.four();
+
+                }
+
+                if (casa3 == 5) {
+
+                    display3.five();
+
+                }
+
+                if (casa3 == 6) {
+
+                    display3.six();
+
+                }
+
+                if (casa3 == 7) {
+
+                    display3.seven();
+
+                }
+
+                if (casa3 == 8) {
+
+                    display3.eight();
+
+                }
+
+                if (casa3 == 9) {
+
+                    display3.nine();
+
+                }
+
+
+            }
+
+
+
+        });
+    }
+
+
+    $(document).ready(function () {
+        buscaNumero();
+    });
+
+</script>
